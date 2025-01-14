@@ -1,33 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import data from './painting.json'
-const title = h1
-const colors
+import { App } from './App';
 
-const app = <div>
-    {title}
-    {color}
-</div>
+console.log(<App/>);
 
-const card = <ul>
-    {data.map((paintCard) => {
-        return <li key={paintCard.id}>
-    <img src={paintCard.url} alt="..." width="480"/>
-    <h2 style={{color: 'tomato'}}>{paintCard.title }</h2>
-    <p>
-        Автор: <a href={paintCard.author.url}>{ paintCard.author.tag}</a>
-    </p>
-    <p>Ціна:  грн</p>
-    <p>Наявність: </p>
-    <button type="button">Додати в кошик</button>
-</li>
-    })}
-</ul>
-  
-  console.log(card);
-  const title = <h1>Hello</h1>
-
-ReactDOM.createRoot(document.getElementById('root')).render(card);
+ReactDOM.createRoot(document.getElementById('root'))
+    .render(
+    
+        <App />
+    );
 
 
 
