@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
 
-console.log(<App/>);
+// console.log(<App />);
+// 1/ Виведіть цей текст у елементі h1, використовуючи JSX розмітку та фігурні дужки для вставки змінної з іменем.
+const titel = <h1>hello</h1>
+//2.  Виведіть зображення з довільним URL та описом у елементі img, використовуючи атрибути src та alt через фігурні дужки.
+const image = <img src="" alt="" />
+// 3. Створіть об'єкт з даними посилання на ваш улюблений сайт, наприклад: {назва_сайту: "Google", url: "https://www.google.com/"}.
+// Виведіть це посилання у елементі a, використовуючи значення з об'єкта через фігурні дужки.
+const gallery = <ul>
+    {/* {arr.map} */}
+</ul>
+
 
 ReactDOM.createRoot(document.getElementById('root'))
     .render(
-    
-        <App />
+        <>      
+            <App />           
+    </>
+       
     );
 
 

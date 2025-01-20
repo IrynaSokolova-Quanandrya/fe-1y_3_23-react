@@ -1,8 +1,9 @@
-import data from '../painting.json';
 
-export const Card = () => {
+
+export const PaintingList = (props) => {
+
   return  <ul>
-    {data.map((paintCard) => {
+    {props.data.map((paintCard) => {
         return <li key={paintCard.id}>
     <img src={paintCard.url} alt="..." width="480"/>
     <h2 style={{color: 'tomato'}}>{paintCard.title }</h2>
