@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { Painting } from "../Painting/Painting";
+import { List } from './PaintingList.styled';
 
 export function PaintingList ({painting}){
     return(
-        <ul>
+        <List>
         {painting.map(({id, title, url, quantity, price, author})=>(
             <Painting 
                 key={id}
@@ -14,7 +15,7 @@ export function PaintingList ({painting}){
                 author={author}
             />
         ))}
-   </ul> 
+   </List> 
    )
 }
 
