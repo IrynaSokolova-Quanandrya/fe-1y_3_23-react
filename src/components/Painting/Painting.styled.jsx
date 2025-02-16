@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const Item = styled.li`
-    flex-basis: calc(100% / 2);
-
+   background-color: #ef8a8a;
+/* width: 200px; */
 `
