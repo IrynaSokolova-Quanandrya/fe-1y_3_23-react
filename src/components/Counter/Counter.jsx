@@ -1,11 +1,5 @@
 import { Component } from "react";
 
-// let counter = 0
-
-// button.addEventListener('click', (e) => {
-// 	counter +=1
-// })
-
 export class Counter extends Component {
 
 	state = {
