@@ -14,9 +14,9 @@ const colorPickerOptions = [
 export const App = () => {
 			return (
 			<div className='container'>
-				{/* <Header/> */}
+				<Header/>
 					{/* <Counter /> */}
-					{/* <ColorPicker options={colorPickerOptions}/> */}
+					<ColorPicker options={colorPickerOptions}/>
 					
 			</div>
 		)
