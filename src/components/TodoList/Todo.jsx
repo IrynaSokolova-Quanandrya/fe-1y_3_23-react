@@ -1,23 +1,35 @@
 import { Item, Text } from './TodoList.styled';
 import { Button } from '../Button/Button.styled';
+import { Component } from 'react';
 
-export const Todo = ({ todoId, text, completed, onDelete, onToggleCompleted }) => {
+export class Todo extends Component {
+
+  componentWillUnmount() {
+    console.log('Розмонтування');
+  }
   
-  const handleDelete = () => {
-    onDelete(todoId)
+  
+  handleDelete = () => {
+    this.props.onDelete(this.props.todoId)
   }
 
-  const handleChange = () => {
-    onToggleCompleted(todoId)
-  }
-    return(
+   handleChange = () => {
+    this.props.onToggleCompleted(this.props.todoId)
+   }
+  
+  render() {
+    const { todoId, text, completed, onDelete, onToggleCompleted } = this.props
+  return(
+      
         <Item>
         <input
           type="checkbox"
           checked={completed}
-          onChange={handleChange} />    
+          onChange={this.handleChange} />    
         <Text checked={completed}>{text}</Text>
-        <Button onClick={handleDelete}>Delete</Button>
+        <Button onClick={this.handleDelete}>Delete</Button>
       </Item>
     )
+  }
+   
 }

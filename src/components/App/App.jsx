@@ -16,6 +16,16 @@ export class App extends Component {
     todos: initialTodos,
   }
 
+  componentDidMount() {
+    console.log('Компонент монтувався');
+  }
+
+  componentDidUpdate() {
+    console.log('Компонент оновився');
+
+  }
+
+
   addTodo = (text)=>{
     const newTodo = {
       id: nanoid(),
@@ -59,7 +69,7 @@ export class App extends Component {
         {/* {this.state.showModal && <Modal onClose={this.toggleModal}>
           <Btn type="button" onClick={this.toggleModal}><IoMdClose /></Btn> */}
                   <TodoEditor addTodo={this.addTodo}/>
-        {/* </Modal>} */}
+        {/* </Mo/dal>} */}
       
         {this.state.todos.length > 0 && <TodoList todos={this.state.todos} onDelete={this.deleteTodo} onToggleCompleted={this.toggleCompleted} />}
       <GlobalStyle/>
