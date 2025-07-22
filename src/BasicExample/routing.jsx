@@ -1,14 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Index } from "./index.page";
-import { Movies } from "./movies.page";
+import { MainPage } from "./pages/MainPage";
+import { MoviesPage } from "./pages/MoviesPage";
 
-export const routing = createBrowserRouter([
+export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Index />,
+    path: '/',
+    element: <MainPage/>
   },
   {
-    path: "/movies",
-    element: <Movies />,
-  },
-]);
+    path: '/movies',
+    element: <MoviesPage/>
+  }
+])
+
+

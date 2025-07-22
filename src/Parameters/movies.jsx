@@ -4,13 +4,13 @@ export const Movies = () => {
   return (
     <ul>
       <li>
-        <NavLink to="/movie/1">Lord of the Rings</NavLink>
+        <NavLink to="/movie/1">Harry Potter and the Philosopher's Stone</NavLink>
       </li>
       <li>
-        <NavLink to="/movie/1">Matrix</NavLink>
+        <NavLink to="/movie/1">Harry Potter and the Chamber of Secrets</NavLink>
       </li>
       <li>
-        <NavLink to="/movie/1">5th element</NavLink>
+        <NavLink to="/movie/1">Harry Potter and the Prisoner of Azkaban</NavLink>
       </li>
     </ul>
   );
