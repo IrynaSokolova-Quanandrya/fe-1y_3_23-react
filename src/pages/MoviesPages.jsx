@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export const MoviesPages = () => {
+  const [searchParams, setSearchParams] = useSearchParams()
+ 
+  const handleChange = (e) => {
+    setSearchParams({sort: e.target.value})
+  } 
+
   return (
     <>
+      <input type="text" value={ searchParams.get('sort') ?? ''} onChange={handleChange} />
       <ul>
         <li>
           <Link to="/movie/1">
